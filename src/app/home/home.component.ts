@@ -36,6 +36,9 @@ export class HomeComponent implements OnInit {
       // for (let i=0; i<data.items.length; i++) {
       //   this.artistList.push(data.items[i].name);
       // }
+    }, (err) => {
+      console.log(err);
+      
     })
 
     this.apiService.getTopTrack()
@@ -44,6 +47,9 @@ export class HomeComponent implements OnInit {
         
         this.topTrack = data.items[0].name;
         this.topTrackImage = data.items[0].album.images[0].url;
+      }, (err) => {
+        console.log(err);
+        
       })
   }
 
