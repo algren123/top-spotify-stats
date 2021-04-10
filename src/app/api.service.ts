@@ -28,18 +28,53 @@ export class ApiService {
     return this.http.get('https://api.spotify.com/v1/me/', { headers })
   }
 
-  getTopArtist() {
+  getTopArtist4Weeks() {
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + this.access_token
+    })
+     return this.http.get(`https://api.spotify.com/v1/me/top/artists?time_range=short_term`, { headers })
+  }
+
+  getTopTrack4Weeks() {
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + this.access_token
+    })
+     return this.http.get(`https://api.spotify.com/v1/me/top/tracks?time_range=short_term`, { headers })
+  }
+
+  getTopArtist6Months() {
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + this.access_token
     })
      return this.http.get(`https://api.spotify.com/v1/me/top/artists?time_range=medium_term`, { headers })
   }
 
-  getTopTrack() {
+  getTopTrack6Months() {
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + this.access_token
     })
      return this.http.get(`https://api.spotify.com/v1/me/top/tracks?time_range=medium_term`, { headers })
+  }
+
+  getTopArtistAllTime() {
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + this.access_token
+    })
+     return this.http.get(`https://api.spotify.com/v1/me/top/artists?time_range=long_term`, { headers })
+  }
+
+  getTopTrackAllTime() {
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + this.access_token
+    })
+     return this.http.get(`https://api.spotify.com/v1/me/top/tracks?time_range=long_term`, { headers })
+  }
+
+  getUserTracks(offset) {
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + this.access_token
+    })
+    return this.http.get(`https://api.spotify.com/v1/me/tracks?limit=50&offset=${offset}`, { headers })
   }
   
 }
