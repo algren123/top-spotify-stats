@@ -35,15 +35,12 @@ export class HomeComponent implements OnInit {
 
     this.apiService.getUserInfo()
       .subscribe((data: any) => {
-        console.log(data);
         this.usersName = data.display_name;
         this.userProfilePicture = data.images[0].url;     
       });
     
     this.apiService.getTopArtist4Weeks()
-    .subscribe((data: any) => {
-      console.log(data);
-      
+    .subscribe((data: any) => {  
       this.topArtist4Weeks = data.items[0].name;
       this.topArtistImage4Weeks = data.items[0].images[0].url;
     }, (err) => {
@@ -53,8 +50,6 @@ export class HomeComponent implements OnInit {
 
     this.apiService.getTopTrack4Weeks()
       .subscribe((data: any) => {
-        console.log(data);
-        
         this.topTrack4Weeks = data.items[0].name;
         this.topTrackImage4Weeks = data.items[0].album.images[0].url;
       }, (err) => {

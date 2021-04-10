@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeComponent } from '../home/home.component';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,11 +9,20 @@ import { HomeComponent } from '../home/home.component';
 export class NavbarComponent implements OnInit {
 
   userProfilePicture: string;
+  homeLink: string;
 
-  constructor(
+  constructor( 
+    private apiService: ApiService,
   ) { }
 
   ngOnInit(): void {
+    this.apiService.getAccessToken();
+    this.homeLink = "/home?access_token=" + this.apiService.access_token;    
+
+    this.apiService.getUserInfo()
+      .subscribe((data: any) => {
+        this.userProfilePicture = data.images[0].url;
+      })
   }
 
 }
