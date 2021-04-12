@@ -1,0 +1,37 @@
+<div class="stats-page">
+    <div class="container">
+        <div class="cards flex">
+            <div class="w-screen" *ngFor="let artist of topArtist;">
+                <div class="items-center position: relative flex flex-wrap flex-row my-5 max-w-xs p-8 bg-white rounded-3xl">
+                    <div style="clip-path: url(#roundedPolygon)">
+                    <img
+                        class="max-w-none h-48"
+                        src="{{artist.image}}"
+                    />
+                    </div>
+                    <div class="flex flex-col space-y-4">
+                    <div class="flex flex-col items-center md:items-start">
+                        <h2 class="text-xl font-medium">{{artist.title}}</h2>
+                    </div>
+                    <div class=" items-center justify-center space-x-3 md:justify-start">
+                        <!-- Icons source => https://boxicons.com/ -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);"><path d="M12.01,2.019c-5.495,0-9.991,4.496-9.991,9.991c0,5.494,4.496,9.99,9.991,9.99c5.494,0,9.99-4.496,9.99-9.99 C22,6.515,17.554,2.019,12.01,2.019z M16.605,16.455c-0.199,0.299-0.549,0.4-0.85,0.201c-2.349-1.45-5.296-1.75-8.793-0.951 c-0.348,0.102-0.648-0.148-0.748-0.449c-0.101-0.35,0.149-0.648,0.45-0.749c3.795-0.85,7.093-0.499,9.69,1.1 C16.704,15.756,16.754,16.155,16.605,16.455L16.605,16.455z M17.805,13.708c-0.251,0.349-0.7,0.499-1.051,0.249 c-2.697-1.646-6.792-2.148-9.939-1.148c-0.398,0.101-0.85-0.1-0.949-0.498c-0.101-0.402,0.1-0.852,0.499-0.952 c3.646-1.098,8.143-0.548,11.239,1.351C17.904,12.859,18.054,13.358,17.805,13.708L17.805,13.708z M17.904,10.909 c-3.197-1.897-8.542-2.097-11.59-1.146c-0.499,0.148-1-0.151-1.148-0.6c-0.15-0.502,0.148-1.001,0.599-1.151 c3.547-1.049,9.392-0.85,13.089,1.351c0.449,0.249,0.599,0.849,0.349,1.298C18.953,11.011,18.354,11.159,17.904,10.909z"></path></svg>
+                    </div>
+                    </div>
+                </div>
+                <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                    <!-- rounded polygon generator => https://weareoutman.github.io/rounded-polygon/ -->
+                    <!-- polygon size 190 * 190 almost the same size as the image -->
+                    <clipPath id="roundedPolygon">
+                        <path
+                        d="M79 6.237604307034a32 32 0 0 1 32 0l52.870489570875 30.524791385932a32 32 0 0 1 16 27.712812921102l0 61.049582771864a32 32 0 0 1 -16 27.712812921102l-52.870489570875 30.524791385932a32 32 0 0 1 -32 0l-52.870489570875 -30.524791385932a32 32 0 0 1 -16 -27.712812921102l0 -61.049582771864a32 32 0 0 1 16 -27.712812921102"
+                        />
+                    </clipPath>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+        
+    </div>
+</div>

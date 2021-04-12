@@ -10,6 +10,7 @@ export class NavbarComponent implements OnInit {
 
   userProfilePicture: string;
   homeLink: string;
+  profileLink: string;
 
   constructor( 
     private apiService: ApiService,
@@ -17,12 +18,14 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.apiService.getAccessToken();
+
     this.homeLink = "/home?access_token=" + this.apiService.access_token;    
+    this.profileLink = "/profile?access_token=" + this.apiService.access_token;
 
     this.apiService.getUserInfo()
       .subscribe((data: any) => {
         this.userProfilePicture = data.images[0].url;
-      })
+      });
   }
 
 }

@@ -33,7 +33,7 @@
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a href="{{this.homeLink}}" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</a>
   
-              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Profile</a>
+              <a href="{{this.profileLink}}" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Profile</a>
   
               <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Stats</a>
             </div>
@@ -44,8 +44,10 @@
           <div class="ml-3 relative">
             <div>
               <button type="button" class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu" aria-expanded="false" aria-haspopup="true">
-                <img class="h-8 w-8 rounded-full" src="{{this.userProfilePicture}}" alt="">
-                <a href="/" class="text-gray-300 hover:bg-green-700 hover:text-white px-3 py-2 ml-4 rounded-md text-sm font-medium">Logout</a>
+                <a href="{{this.profileLink}}">
+                    <img class="h-8 w-8 rounded-full" src="{{this.userProfilePicture}}" alt="">
+                </a>
+                <a href="https://www.spotify.com/logout/" class="text-gray-300 hover:bg-green-700 hover:text-white px-3 py-2 ml-4 rounded-md text-sm font-medium">Logout</a>
               </button>
             </div>
           </div>
@@ -59,7 +61,7 @@
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
         <a href="#" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</a>
   
-        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Profile</a>
+        <a href="/profile" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Profile</a>
   
         <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Stats</a>
       </div>
