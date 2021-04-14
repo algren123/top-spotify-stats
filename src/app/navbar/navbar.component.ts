@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
   userProfilePicture: string;
   homeLink: string;
   profileLink: string;
+  statsLink: string;
 
   constructor( 
     private apiService: ApiService,
@@ -21,6 +22,7 @@ export class NavbarComponent implements OnInit {
 
     this.homeLink = "/home?access_token=" + this.apiService.access_token;    
     this.profileLink = "/profile?access_token=" + this.apiService.access_token;
+    this.statsLink = "/stats?access_token=" + this.apiService.access_token;
 
     this.apiService.getUserInfo()
       .subscribe((data: any) => {

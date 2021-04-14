@@ -32,42 +32,42 @@ export class ApiService {
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + this.access_token
     })
-     return this.http.get(`https://api.spotify.com/v1/me/top/artists?time_range=short_term`, { headers })
+     return this.http.get(`https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=50`, { headers })
   }
 
   getTopTrack4Weeks() {
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + this.access_token
     })
-     return this.http.get(`https://api.spotify.com/v1/me/top/tracks?time_range=short_term`, { headers })
+     return this.http.get(`https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=50`, { headers })
   }
 
   getTopArtist6Months() {
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + this.access_token
     })
-     return this.http.get(`https://api.spotify.com/v1/me/top/artists?time_range=medium_term`, { headers })
+     return this.http.get(`https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=50`, { headers })
   }
 
   getTopTrack6Months() {
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + this.access_token
     })
-     return this.http.get(`https://api.spotify.com/v1/me/top/tracks?time_range=medium_term`, { headers })
+     return this.http.get(`https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=50`, { headers })
   }
 
   getTopArtistAllTime() {
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + this.access_token
     })
-     return this.http.get(`https://api.spotify.com/v1/me/top/artists?time_range=long_term`, { headers })
+     return this.http.get(`https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=50`, { headers })
   }
 
   getTopTrackAllTime() {
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + this.access_token
     })
-     return this.http.get(`https://api.spotify.com/v1/me/top/tracks?time_range=long_term`, { headers })
+     return this.http.get(`https://api.spotify.com/v1/me/top/tracks?time_range=long_term&limit=50`, { headers })
   }
 
   getUserTracks(offset) {

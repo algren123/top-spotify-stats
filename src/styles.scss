@@ -23,3 +23,12 @@ body {
 .mat-tab-nav-bar.mat-primary .mat-ink-bar {
   background-color: #34d399;
 }
+
+.mat-tab-header {
+  max-width: 600px;
+  margin: 24px;
+}
+
+.mat-tab-group {
+  align-items: center;
+}
