@@ -13,11 +13,20 @@ export class NavbarComponent implements OnInit {
   profileLink: string;
   statsLink: string;
 
+  navbarHamburger: HTMLElement;
+
   constructor( 
     private apiService: ApiService,
   ) { }
 
   ngOnInit(): void {
+    const navbarExists = setInterval(() => {
+      if (document.getElementById('mobile-menu') !== null) {
+        this.navbarHamburger = document.getElementById('mobile-menu');
+        clearInterval(navbarExists);
+      }
+    }, 1000);
+    
     this.apiService.getAccessToken();
 
     this.homeLink = "/home?access_token=" + this.apiService.access_token;    
@@ -28,6 +37,15 @@ export class NavbarComponent implements OnInit {
       .subscribe((data: any) => {
         this.userProfilePicture = data.images[0].url;
       });
+  }
+
+  toggleNavbar() {
+    // this.navbarHamburger = document.getElementById('mobile-menu')
+    if (this.navbarHamburger.style.display === 'none') {
+      this.navbarHamburger.style.display = 'block';
+    } else {
+      this.navbarHamburger.style.display = 'none';
+    }
   }
 
 }

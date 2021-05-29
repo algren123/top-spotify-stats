@@ -11,6 +11,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { StatsComponent } from './stats/stats.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { StatsComponent } from './stats/stats.component';
     HomeComponent,
     NavbarComponent,
     ProfileComponent,
-    StatsComponent
+    StatsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

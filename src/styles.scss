@@ -14,9 +14,17 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+img {
+  max-width: none;
+}
+
 .mat-tab-label .mat-tab-label-content {
   font-size: 24px;
   font-weight: bold;
+
+  @media only screen and (max-width: 880px) {
+    font-size: 14px;
+  }
 }
 
 .mat-tab-group.mat-primary .mat-ink-bar,
@@ -27,6 +35,12 @@ body {
 .mat-tab-header {
   max-width: 600px;
   margin: 24px;
+}
+
+.mat-tab-labels {
+  @media only screen and (max-width: 880px) {
+    width: 300px;
+  }
 }
 
 .mat-tab-group {
