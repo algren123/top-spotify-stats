@@ -4,9 +4,9 @@ A responsive project that shows the user's some of his top Spotify stats, such a
 
 LIVE Link: https://top-spotify-stats.herokuapp.com
 
-Technology used:
--HTML/CSS + Sass
--Angular
--TypeScript
--TailwindCSS
+Technology used:  
+-HTML/CSS + Sass  
+-Angular  
+-TypeScript  
+-TailwindCSS  
 -Material Angular (Tabs CDK)
